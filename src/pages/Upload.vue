@@ -11,6 +11,8 @@ const seniorUrl = ref("");
 const handleFileChange = (e: Event) => {
   const target = e.target as HTMLInputElement;
   if (target.files?.length) {
+    // @ts-ignore
+
     file.value = target.files[0];
   }
 };
@@ -49,6 +51,7 @@ const uploadVideo = async () => {
     .select("family_id")
     .eq("id", uid)
     .single();
+  // @ts-ignore
 
   const fam = profile.family_id;
 

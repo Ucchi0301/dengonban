@@ -32,6 +32,8 @@ function togglePlay() {
 }
 onMounted(() => {
   // 20分ごと（1200000ms）
+  // @ts-ignore
+
   timer = setInterval(async () => {
     if (!familyId.value) return;
 

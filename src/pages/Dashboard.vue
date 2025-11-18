@@ -1,4 +1,3 @@
-// @ts-ignore
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { supabase } from "../lib/supabaseClient";
@@ -131,7 +130,9 @@ const copyUrl = async () => {
     <button
       @click="
         supabase.auth.signOut().then(() => {
+          // @ts-ignore
           localStorage.clear();
+          // @ts-ignore
           location.href = '/login';
         })
       "

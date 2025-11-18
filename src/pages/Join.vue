@@ -21,6 +21,7 @@ const handleRegister = async () => {
   // 匿名ログイン
   const { data: authData, error } = await supabase.auth.signInAnonymously();
   if (error) return alert(error.message);
+  // @ts-ignore
 
   const userId = authData.user.id;
 
