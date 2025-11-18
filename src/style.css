@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* ---- ここから下は全部削除してOK ---- */
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@keyframes small-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  } /* ← デフォルトより小さい */
+  60% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-small-bounce {
+  animation: small-bounce 1.1s ease-in-out infinite;
+}
