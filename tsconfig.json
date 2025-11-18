@@ -8,6 +8,9 @@
     "skipLibCheck": true,
     "noEmitOnError": false,
     "allowJs": true,
-    "checkJs": false
+    "checkJs": false,
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false
   }
 }
