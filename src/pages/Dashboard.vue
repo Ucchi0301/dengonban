@@ -29,7 +29,7 @@ onMounted(async () => {
   familyId.value = profile?.family_id ?? "";
 
   // 家族がJOINするURL
-  familyUrl.value = `${window.location.origin}/?family_id=${familyId.value}`;
+  familyUrl.value = `${window.location.origin}/join?family_id=${familyId.value}`;
 
   // 家族用QR（JOINページ）
   familyQr.value = await QRCode.toDataURL(familyUrl.value);
